@@ -26,7 +26,7 @@ def handler(event, context):
     year = datetime.now().year
     customers = []
     location_lookup = {(c, r): i+1 for i, (c, rlist) in enumerate([(c, r) for c in countries for r in regions[c]]) for r in regions[c]}
-    for i in range(1, 100_001):
+    for i in range(1, 1000):
         name = faker.name()
         email = faker.email()
         signup_date = faker.date_between(start_date=date(year, 1, 1), end_date=date(year, 12, 31))
