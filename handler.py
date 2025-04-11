@@ -29,7 +29,7 @@ def handler(event, context):
     for i in range(1, 100_001):
         name = faker.name()
         email = faker.email()
-        signup_date = faker.date_between(start_date=f'{year}-01-01', end_date=f'{year}-12-31')
+        signup_date = faker.date_between(start_date=date(year, 1, 1), end_date=date(year, 12, 31))
         last_login = signup_date + timedelta(days=random.randint(1, 365))
         is_active = random.choice([True, False])
         segment_id = segments.index(random.choice(segments)) + 1
