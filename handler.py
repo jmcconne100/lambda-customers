@@ -2,7 +2,7 @@ import boto3
 import pandas as pd
 from faker import Faker
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import os
 
 faker = Faker()
